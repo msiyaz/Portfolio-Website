@@ -1,35 +1,24 @@
-import Navbar from "./Components/Navbar/Navbar";
-import Intro from "./Components/Intro/Intro";
-import Services from "./Components/Services/Services";
-import "./App.css";
-import Experience from "./Components/Experience/Experience";
-import Portfolio from "./Components/Portfolio/Portfolio";
-import Testimonial from "./Components/Testimonial/Testimonial";
-import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer";
-import {themeContext} from "./Context";
-import { useContext } from "react";
 import React from 'react';
+// components
+import Banner from './components/Banner';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import About from './components/About';
+import Work from './components/Work';
+import Contact from './components/Contact';
 
-
-function App() {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-  return(
-    <div className="App" style={{
-      background : darkMode? '#242D49' : '',
-      color : darkMode? 'tan' : ''
-     }}>
-      <Navbar />
-      <Intro/>
-      <Services/>
-      <Experience/>
-      <Portfolio/>
-      <Testimonial/>
-      <Contact/>
-      <Footer/>
+const App = () => {
+  return (
+    <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
+      <Header />
+      <Banner />
+      <Nav />
+      <About />
+      <Work />
+      <Contact />
+      <div className='h-[4000px]'></div>
     </div>
   );
-}
+};
 
 export default App;

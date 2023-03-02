@@ -8,7 +8,7 @@ const Header = () => {
     <div className='container mx-auto'>
       <div className='flex justify-between items-center'>
         {/** Logo */}
-        <a href='#'>
+        <a href='https://www.linkedin.com/in/munyaradzi-siyawamwaya-333679168/'>
           <img src={logo} alt=''/>
         </a>
         {/**button */}
